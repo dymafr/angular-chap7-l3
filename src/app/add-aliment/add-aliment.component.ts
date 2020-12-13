@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { AlimentService } from "../aliment.service";
 
 @Component({
   selector: "app-add-aliment",
@@ -6,7 +7,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./add-aliment.component.scss"]
 })
 export class AddAlimentComponent implements OnInit {
-  constructor() {}
+  constructor(private alimentService: AlimentService) {}
 
   ngOnInit() {}
 }

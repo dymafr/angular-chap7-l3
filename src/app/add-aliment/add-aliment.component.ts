@@ -7,7 +7,14 @@ import { AlimentService } from "../aliment.service";
   styleUrls: ["./add-aliment.component.scss"]
 })
 export class AddAlimentComponent implements OnInit {
+  public aliment: string = "Aliment";
+
   constructor(private alimentService: AlimentService) {}
 
   ngOnInit() {}
+
+  public addAliment() {
+    this.alimentService.aliments.push(this.aliment);
+    this.aliment = "";
+  }
 }

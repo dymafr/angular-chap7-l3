@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { AlimentService } from "../aliment.service";
 
 @Component({
   selector: "app-list-aliment",
@@ -6,7 +7,11 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./list-aliment.component.scss"]
 })
 export class ListAlimentComponent implements OnInit {
-  constructor() {}
+  public aliments: string[];
 
-  ngOnInit() {}
+  constructor(private alimentService: AlimentService) {}
+
+  ngOnInit() {
+    this.aliments = this.alimentService.aliments;
+  }
 }
